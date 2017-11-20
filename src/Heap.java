@@ -82,12 +82,6 @@ public class Heap {
                         pushData(node.getRightChild(), num, MIN_HEAP);
                     }else {
 
-//                        if(node.getRightChild().getData() > value){
-//                            pushData(node.getRightChild(), value, MIN_HEAP);
-//                        }else {
-//                            pushData(node.getLeftChild(), value, MIN_HEAP);
-//                        }
-
                         if(!node.getLeftChild().hasChilds()){
                             pushData(node.getLeftChild(), value, MIN_HEAP);
                         }else if(!node.getRightChild().hasChilds()){
@@ -189,16 +183,6 @@ public class Heap {
         private boolean hasChilds(){
 
             return leftChild != null && rightChild != null;
-        }
-
-        private boolean hasLeftChild(){
-
-            return leftChild != null;
-        }
-
-        private boolean hasRightChild(){
-
-            return rightChild != null;
         }
     }
 
